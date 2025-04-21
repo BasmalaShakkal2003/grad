@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
+// import 'package:syncfusion_flutter_charts/charts.dart' as charts;
+import 'package:fl_chart/fl_chart.dart';
 
 //------------------------------Your Progress------------------------------
 class YourProgress extends StatelessWidget {
@@ -110,29 +111,22 @@ class YourProgress extends StatelessWidget {
         children: [
           SizedBox(
             height: 140,
-            child: SfCircularChart(
-              series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                  dataSource: data,
-                  xValueMapper: (ChartData data, _) => data.category,
-                  yValueMapper: (ChartData data, _) => data.value,
-                  pointColorMapper: (ChartData data, _) => data.color,
-                  dataLabelSettings: DataLabelSettings(
-                    isVisible: true,
-                    labelPosition: ChartDataLabelPosition.inside,
-                    textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    builder: (dynamic data, dynamic point, _, __, ___) {
-                      final percentage =
-                          (point.y / total * 100).toStringAsFixed(0);
-                      return Text('$percentage%');
-                    },
+            child: PieChart(
+              PieChartData(
+                sections: data
+                    .map((item) => PieChartSectionData(
+                  value: item.value.toDouble(),
+                  title: item.category,
+                  color: item.color,
+                  radius: 60,
+                  titleStyle: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
-                )
-              ],
+                ))
+                    .toList(),
+              ),
             ),
           ),
           const SizedBox(height: 8),
@@ -214,8 +208,9 @@ class YourProgress extends StatelessWidget {
 
 // Data model for chart
 class ChartData {
-  ChartData(this.category, this.value, this.color);
   final String category;
-  final num value;
+  final int value;
   final Color color;
+
+  ChartData(this.category, this.value, this.color);
 }

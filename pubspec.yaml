@@ -14,7 +14,6 @@ dependencies:
   provider: ^6.0.5
   flutter_svg: ^2.0.17    
   loading_animation_widget: ^1.2.0+2
-  syncfusion_flutter_charts: ^23.1.40
   shared_preferences: ^2.2.2
   cupertino_icons: ^1.0.8
   fl_chart: ^0.65.0
@@ -46,14 +45,14 @@ flutter:
    - assets/bg.png
    - assets/bgd.png
    - assets/chat.png
-   - assets/supervisor assets/bg.png
-   - assets/supervisor assets/icons/chat.png
-   - assets/supervisor assets/icons/pdf.svg
-   - assets/supervisor assets/icons/pdf2.svg
-   - assets/supervisor assets/icons/pdf.png
-   - assets/supervisor assets/bgd.png
-   - assets/supervisor assets/icons/edit.png
-   - assets/supervisor assets/done.png
-   - assets/supervisor assets/attend.png
-   - assets/supervisor assets/progress.png
-   - assets/supervisor assets/profile.png
+   - assets/profile.png
+   - assets/chat2.png
+   - assets/icons/chat.png
+   - assets/icons/chat.png
+   - assets/icons/pdf.svg
+   - assets/icons/pdf2.svg
+   - assets/icons/pdf.png
+   - assets/icons/edit.png
+   - assets/done.png
+   - assets/attend.png
+   - assets/progress.png
