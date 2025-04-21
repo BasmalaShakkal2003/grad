@@ -1,0 +1,59 @@
+name: flutter_application_1
+description: "A new Flutter project."
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.18.1
+  provider: ^6.0.5
+  flutter_svg: ^2.0.17    
+  loading_animation_widget: ^1.2.0+2
+  syncfusion_flutter_charts: ^23.1.40
+  shared_preferences: ^2.2.2
+  cupertino_icons: ^1.0.8
+  fl_chart: ^0.65.0
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+   - assets/LOGO.png
+   - assets/head.png
+   - assets/head2.png
+   - assets/done.png
+   - assets/design1.png
+   - assets/design2.png
+   - assets/chat.png
+   - assets/ai.png
+   - assets/aibig.png
+   - assets/notification.png
+   - assets/github.png
+   - assets/documentation.png
+   - assets/LOGO2.png
+   - assets/STUDENT.png
+   - assets/SUPERVISOR.png
+   - assets/gradchat.png
+   - assets/bg.png
+   - assets/bgd.png
+   - assets/chat.png
+   - assets/supervisor assets/bg.png
+   - assets/supervisor assets/icons/chat.png
+   - assets/supervisor assets/icons/pdf.svg
+   - assets/supervisor assets/icons/pdf2.svg
+   - assets/supervisor assets/icons/pdf.png
+   - assets/supervisor assets/bgd.png
+   - assets/supervisor assets/icons/edit.png
+   - assets/supervisor assets/done.png
+   - assets/supervisor assets/attend.png
+   - assets/supervisor assets/progress.png
+   - assets/supervisor assets/profile.png
