@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import'role_selection_screen.dart';
 
 // --------------------------Profile screen-------------------------------
 class ProfileScreen extends StatelessWidget {
@@ -107,7 +108,12 @@ class ProfileScreen extends StatelessWidget {
       width: 200,
       height: 50,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const RoleSelectionScreen()));
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
