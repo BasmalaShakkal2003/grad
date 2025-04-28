@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../profile_data.dart';
+import'role_selection_screen.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -111,7 +112,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   // Logout Button
                   GestureDetector(
                     onTap: () {
-                      print("Logout tapped!");
+                      Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const RoleSelectionScreen()));
                     },
                     child: Container(
                       width: screenWidth * 0.5,
