@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'student_login_screen.dart';
-import 'doctor_login_screen.dart';
+import 'SPV/screens/doctor_login_screen.dart';
 
 // --------------------Role selection screen---------------------------
 class RoleSelectionScreen extends StatelessWidget {

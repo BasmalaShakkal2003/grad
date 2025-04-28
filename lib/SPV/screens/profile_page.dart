@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../profile_data.dart';
-import 'role_selection_screen.dart';
+import 'package:flutter_application_1/role_selection_screen.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
