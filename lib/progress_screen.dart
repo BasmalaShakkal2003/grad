@@ -63,7 +63,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const YourProgress()),
+                            builder: (context) => YourProgress()),
                       );
                     },
                   ),

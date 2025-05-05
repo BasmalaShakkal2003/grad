@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../profile_data.dart';
 import 'package:flutter_application_1/role_selection_screen.dart';
+import '../main.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -54,17 +55,17 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           // Back Button
           Positioned(
-            top: screenHeight * 0.099,
-            left: screenWidth * 0.03,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
+            top: 70,
+            left: 2,
+            child: IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.white),
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainScreen()),
+                  (Route<dynamic> route) => false,
+                );
               },
-              child: Icon(
-                Icons.arrow_back,
-                size: screenWidth * 0.07,
-                color: Colors.white,
-              ),
             ),
           ),
           // Profile Image & Title
@@ -93,7 +94,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
           ),
-           
+
           Positioned.fill(
             top: screenHeight * 0.26,
             child: SingleChildScrollView(
@@ -104,21 +105,22 @@ class _ProfilePageState extends State<ProfilePage> {
               child: Column(
                 children: [
                   ...profileData.entries.map((entry) => buildProfileField(
-                    entry.key, 
-                    entry.value,
-                    screenWidth,
-                  )),
+                        entry.key,
+                        entry.value,
+                        screenWidth,
+                      )),
                   SizedBox(height: screenHeight * 0.03),
                   // Logout Button
                   GestureDetector(
                     onTap: () {
-                    Navigator.pushAndRemoveUntil(
-                     context,
-                       MaterialPageRoute(
-                        builder: (context) => const RoleSelectionScreen(),
-                          ),
-                            (route) => false,
-                             ); },
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const RoleSelectionScreen(),
+                        ),
+                        (route) => false,
+                      );
+                    },
                     child: Container(
                       width: screenWidth * 0.5,
                       height: screenHeight * 0.07,
@@ -128,7 +130,8 @@ class _ProfilePageState extends State<ProfilePage> {
                         borderRadius: BorderRadius.circular(screenWidth * 0.04),
                         boxShadow: [
                           BoxShadow(
-                            color: const Color.fromARGB(255, 129, 129, 129).withOpacity(0.5),
+                            color: const Color.fromARGB(255, 129, 129, 129)
+                                .withOpacity(0.5),
                             spreadRadius: 2,
                             blurRadius: 5,
                             offset: const Offset(0, 5),

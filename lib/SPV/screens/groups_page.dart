@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../groups_data.dart';  
 import 'group_details_screen.dart';
+import '../main.dart';
 
 class GroupsPage extends StatelessWidget {
   const GroupsPage({super.key});
@@ -52,8 +53,13 @@ class GroupsPage extends StatelessWidget {
             left: screenWidth * 0.03,
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
-              },
+
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainScreen()),
+                  (Route<dynamic> route) => false,
+                );
+              },              
               child: Icon(
                 Icons.arrow_back,
                 size: screenWidth * 0.07,
